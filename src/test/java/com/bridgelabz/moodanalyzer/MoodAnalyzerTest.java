@@ -23,7 +23,7 @@ public class MoodAnalyzerTest {
 	}
 
 	@Test
-	public void givenMessage_WhenNull_ShouldReturnHappy() {
+	public void givenMessage_WhenNull_ShouldThrowMoodAnalysisNullException() {
 
 		MoodAnalyzer moodAnalyzer = new MoodAnalyzer(null);
 		try {
@@ -35,7 +35,7 @@ public class MoodAnalyzerTest {
 	}
 
 	@Test
-	public void givenMessage_WhenEmpty_ShouldReturnHappy() {
+	public void givenMessage_WhenEmpty_ShouldThrowMoodAnalysisEmptyException() {
 
 		MoodAnalyzer moodAnalyzer = new MoodAnalyzer("");
 		try {
