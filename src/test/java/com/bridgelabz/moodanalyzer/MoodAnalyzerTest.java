@@ -9,16 +9,16 @@ public class MoodAnalyzerTest {
 	@Test
 	public void givenMessage_WhenSad_ShouldReturnSad() throws Exception {
 		
-		MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-		String mood = moodAnalyzer.analyzeMood("This is a sad message");
+		MoodAnalyzer moodAnalyzer = new MoodAnalyzer("This is a Sad message");
+		String mood = moodAnalyzer.analyzeMood();
 		Assert.assertThat(mood, CoreMatchers.is("SAD"));
 	}
 	
 	@Test
 	public void givenMessage_WhenHappy_ShouldReturnHappy() throws Exception {
 		
-		MoodAnalyzer moodAnalyzer = new MoodAnalyzer();
-		String mood = moodAnalyzer.analyzeMood("This is a happy message");
+		MoodAnalyzer moodAnalyzer = new MoodAnalyzer("This is a Happy message");
+		String mood = moodAnalyzer.analyzeMood();
 		Assert.assertThat(mood, CoreMatchers.is("HAPPY"));
 	}
 }
